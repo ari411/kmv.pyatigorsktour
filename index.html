@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пятигорск — Туристический портал</title>
 
-    <!-- Подключение шрифта Inter -->
-    <link href="./Пятигорск — Туристический портал_files/css2" rel="stylesheet">
-
-    <!-- Подключение Font Awesome для иконок -->
-    <link rel="stylesheet" href="./Пятигорск — Туристический портал_files/all.min.css" integrity="sha512-pIV2aEN3bE+ORCz4mKcPvsLrZNnYJ3lg8N6m3a+8PCl0qE+4Vx1s5L1Yd0XV13e5X5H6ePvgv5rRhr7eWxkg6Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    <!-- Подключение AOS (Animate On Scroll) для анимаций при прокрутке -->
-    <link href="./Пятигорск — Туристический портал_files/aos.css" rel="stylesheet">
 
     <style>
         /*
@@ -62,7 +54,7 @@
 
         :root {
             --primary-color: #0d6c79;
-            --secondary-color: #e2ff92;
+            --secondary-color: hsl(0, 0%, 100%);
             --accent-color1: #00BFFF;
             --accent-color2: #FF6347;
             --light-bg: #95a7a4;
@@ -242,7 +234,7 @@
         }
 
         .hero__btn:hover {
-            background: #5848c2;
+            background: #044786;
             transform: translateY(-2px);
         }
 
@@ -475,7 +467,7 @@
         }
 
         .chat-input button:hover {
-            background: #5848c2;
+            background: #cbe925;
         }
 
         /* ---------------------------------------
@@ -661,7 +653,7 @@
         }
     </style>
 </head>
-<img class="safum-vpn-status" id="kfnpmnanpmbomdbolkkjbjmonlebhlcl-img" src="chrome-extension://kfnpmnanpmbomdbolkkjbjmonlebhlcl/web_accessible_resources/status_on.png" alt="status"><body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+
     <!--
         ---------------------------------------
         HEADER
@@ -677,17 +669,7 @@
     -->
     <header class="fade-in">
         <div class="logo">Пятигорск Тур</div>
-        <nav>
-            <ul>
-                <li><a href="#top" class="active">Главная</a></li>
-                <li><a href="#attractions">Достопримечательности</a></li>
-                <li><a href="#restaurant">Кафе и рестораны</a></li>
-                <li><a href="#route-planner">Маршрут</a></li>
-                <li><a href="#chatbot">Чат-бот</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-        </nav>
+        <nav id="navigation"></nav>
     </header>
 
     <!--
@@ -697,14 +679,13 @@
         Комментарий: Здесь стоит заменить фоновую картинку или 3D-сцену под тематику Пятигорска.
         Можно обновить текст на актуальный для туристического портала.
     -->
-    <section class="hero fade-in" id="top">
-        <canvas id="hero-3d-canvas" width="796" height="754" style="width: 796px; height: 754px;"></canvas>
+    <section class="hero fade-in" id="top" style="padding-top: 0px;">
         <div class="hero__content aos-init aos-animate" data-aos="fade-up">
             <h1>Пятигорск — жемчужина Кавказских Минеральных Вод</h1>
             <p>Откройте для себя уникальные термальные источники, величественные горные пейзажи и насыщенную культурно-историческую атмосферу города.</p>
-            <img src="https://avatars.mds.yandex.net/i?id=04d28f969c3dd2dcf2fac933d9b2a0d4e4130bd5-9149794-images-thumbs&n=13" alt="" style="position: absolute; left: 700px; top: 80px; background-size:contain ; height: 300px;">
+            <img src="image.png" alt="" style="position: absolute; left: 700px; top: 1px; background-size:contain ; object-fit: contain; max-width: 2000px;width: 1000px;">
             <p><strong>Планируйте свое путешествие и откройте новые грани Южной России</strong></p>
-            <a href="http://localhost:63342/random_number_bot/1.html?_ijt=c7ak02qdbet21amm113fo5k7t2&amp;_ij_reload=RELOAD_ON_SAVE#attractions" class="hero__btn hover-zoom">Исследовать <i class="fas fa-arrow-right"></i></a>
+            <a href="#attractions" class="hero__btn hover-zoom">Исследовать <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
@@ -818,7 +799,7 @@
                 <p class="info">Часы работы:8:00 до 00:00<br>Средний чек:  ~400 руб.<br>Адрес:  улица Гоголя, 1</p>
             </div>
             <div class="attraction-card card hover-zoom" data-type="cultural">
-                <img src="https://avatars.mds.yandex.net/i?id=3ca23fa55d7107abdcd96087df238a7fb60281f37fcc858b-13203964-images-thumbs&n=13" alt="Кухни мира">
+                <img src="https://avatars.mds.yandex.net/i?id=50b237c95da22a3af6690e4611b74a8f8bfb1c86-5869591-images-thumbs&n=13" alt="Кухни мира">
                 <h3>Кухни мира</h3>
                 <p>Здесь можно найти блюда разных кухонь мира, такие как русская, грузинская, японская, кавказская, паназиатская и другие. Гости отмечают, что здесь большой выбор блюд из мяса, рыбы, креветок, а также выпечки, хинкали, восточных сладостей, хачапури по-аджарски, плова, лепёшек, десертов и муссов. Также можно заказать пиво и алкогольные коктейли. .</p>
                 <p class="info">Часы работы:09:00 до 21:00 <br>Средний чек: ~700 руб<br>Адрес:ул. Леваневского, 3, стр. 9 </p>
@@ -962,10 +943,6 @@
         // -----------------------------------
         // Инициализация AOS анимаций
         // -----------------------------------
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
 
         // -----------------------------------
         // FAQ раскрытие
@@ -1064,49 +1041,6 @@
         // -----------------------------------
         // 3D-анимация в HERO (демо)
         // -----------------------------------
-        const canvas = document.getElementById('hero-3d-canvas');
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-        camera.position.set(0, 1.5, 3);
-        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
-
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-        controls.enablePan = false;
-        controls.minDistance = 2;
-        controls.maxDistance = 5;
-
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-        scene.add(ambientLight);
-
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-        directionalLight.position.set(5, 10, 7.5);
-        scene.add(directionalLight);
-
-        // Пример 3D-объекта (можно заменить моделью горы или символом города)
-        const geometry = new THREE.TorusKnotGeometry(0.6, 0.2, 100, 16);
-        const material = new THREE.MeshStandardMaterial({ color: 0x6C63FF, metalness: 0.6, roughness: 0.4 });
-        const torusKnot = new THREE.Mesh(geometry, material);
-        scene.add(torusKnot);
-
-        function animate() {
-            requestAnimationFrame(animate);
-            torusKnot.rotation.x += 0.005;
-            torusKnot.rotation.y += 0.005;
-            controls.update();
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        window.addEventListener('resize', () => {
-            const width = canvas.clientWidth;
-            const height = canvas.clientHeight;
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
-            renderer.setSize(width, height);
-        });
     </script>
 
 
@@ -1146,4 +1080,132 @@
       }
   };
 })();
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        console.log("Вы используете мобильное устройство.");
+        let nav = document.getElementById("navigation");
+
+    nav.innerHTML = `
+    <style>
+    .burger-menu {
+        position: relative;
+    }
+
+    .burger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        height: 21px;
+        justify-content: space-between;
+        transition: transform 0.3s ease; /* Плавный переход для бургер-меню */
+    }
+
+    .line {
+        height: 3px;
+        background-color: #333;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links {
+        height: 0; /* Начальная высота */
+        overflow: hidden; /* Скрываем переполнение */
+        position: absolute;
+        top: 60px;
+        right: 0; /* Выравнивание меню вправо */
+        background-color: #fff;
+        padding: 0 10px; /* Убираем внутренние отступы */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Обеспечивает видимость над другими элементами */
+        transition: height 0.3s ease; /* Плавный переход для высоты */
+    }
+
+    .nav-links ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0; /* Убираем отступы для списка */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+    }
+
+    .show {
+        height: auto; /* Автоматическая высота при показе */
+        padding: 10px; /* Добавляем отступы при открытом меню */
+    }
+    </style>
+
+    <div class="burger-menu">
+        <div class="burger" id="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="top">Главная</a></li>
+                <li><a href="#attraction">Достопримечательности</a></li>
+                <li><a href="#cafe">Кафе и Рестораны</a></li>
+                <li><a href="#route-planner">Маршрут</a></li>
+                <li><a href="#chatbot">Чат-Бот</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </div>
+    `;
+
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+
+    burger.onclick = function(event) {
+        event.stopPropagation(); // Останавливаем событие, чтобы клик по бургеру не закрывал меню
+        const isShown = navLinks.classList.toggle('show'); // Переключаем класс для отображения меню
+        
+        // Меняем бургер-иконку на крестик (для улучшения UX)
+        const lines = document.querySelectorAll('.line');
+        if (isShown) {
+            lines[0].style.transform = "rotate(45deg) translateY(10px)";
+            lines[1].style.opacity = "0"; // Скрываем среднюю линию
+            lines[2].style.transform = "rotate(-45deg) translateY(-10px)";
+        } else {
+            lines[0].style.transform = "rotate(0) translateY(0)";
+            lines[1].style.opacity = "1"; // Показываем среднюю линию
+            lines[2].style.transform = "rotate(0) translateY(0)";
+        }
+    };
+
+    // Закрываем меню при клике вне бургер-меню
+    document.addEventListener('click', function(event) {
+        if (navLinks.classList.contains('show')) {
+            navLinks.classList.remove('show'); // Убираем класс показа меню
+            const lines = document.querySelectorAll('.line');
+            // Возвращаем бургер-иконку в исходное состояние
+            lines[0].style.transform = "rotate(0) translateY(0)";
+            lines[1].style.opacity = "1"; // Показываем среднюю линию
+            lines[2].style.transform = "rotate(0) translateY(0)";
+        }
+    });
+    
+
+    } else {
+        console.log("Вы используете ПК.");
+
+        let nav = document.getElementById("navigation");
+
+        nav.innerHTML = `<ul>
+                    <li><a href="#top">Главная</a></li>
+                    <li><a href="#attractions">Достопримечательности</a></li>
+                    <li><a href="#cafe">Кафе и рестораны</a></li>
+                    <li><a href="#route-planner">Маршрут</a></li>
+                    <li><a href="#chatbot">Чат-бот</a></li>
+                    <li><a href="#contacts">Контакты</a></li>`}
+
 </script></body></html>
